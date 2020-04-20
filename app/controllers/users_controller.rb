@@ -78,10 +78,7 @@ class UsersController < ApplicationController
   end
 
   def likes
-    # 変数@userを定義してください
     @user = User.find_by(id: params[:id])
-
-    # 変数@likesを定義してください
     @likes = Like.where(user_id: @user.id)
 
   end
